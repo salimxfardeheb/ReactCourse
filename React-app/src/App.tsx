@@ -1,9 +1,18 @@
 import Button from "./components/button";
+import Alert from "./components/alert";
+import { useState } from "react";
 
 function App() {
+  const [alertVisibility, setAlertVisibility] = useState(false);
+  const alert = (
+    <Alert onClose={() => setAlertVisibility(false)}>
+      Close
+    </Alert>
+  );
   return (
     <div>
-      <Button onClick={ ()=> console.log("clicked")}>My button</Button>
+      {alertVisibility && alert}
+      <Button onClick={() => setAlertVisibility(true)}>My button</Button>
     </div>
   );
 }

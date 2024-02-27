@@ -6,9 +6,9 @@ interface Props {
   onClick: () => void;
 }
 
-const Button = ({ children, onClick, color = 'primary' }: Props) => {
+const Button = ({ children, onClick, color = "primary" }: Props) => {
   return (
-    <button type="button" className={"btn btn-"+ color} onClick={onClick}>
+    <button type="button" className={"btn btn-" + color} onClick={onClick}>
       {children}
     </button>
   );
